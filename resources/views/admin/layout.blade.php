@@ -89,9 +89,7 @@
         @include('admin.partials.header')
 
       <div class="content-wrapper">
-          <div class="content">
             @yield('content')
-          </div>
       </div>
 
         @include('admin.partials.footer')
@@ -99,7 +97,7 @@
     </div>
   </div>
 
-  <script src="{{ URL::asset('admin/assets/plugins/jquery/jquery.min.js') }}"></script>
+<script src="{{ URL::asset('admin/assets/plugins/jquery/jquery.min.js') }}"></script>
 <script src="{{ URL::asset('admin/assets/plugins/slimscrollbar/jquery.slimscroll.min.js') }}"></script>
 <script src="{{ URL::asset('admin/assets/plugins/jekyll-search.min.js') }}"></script>
 
@@ -141,6 +139,12 @@
 
 
 <script src="{{ URL::asset('admin/assets/js/sleek.bundle.js') }}"></script>
+
+<script>
+  $('.delete').on('submit', function(){
+    return confirm("Do you want to remove this?");
+  });
+</script>
 </body>
 
 </html>
